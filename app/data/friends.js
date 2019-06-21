@@ -33,4 +33,6 @@ var friends = [
     }
 ];
 
+var matches = [];
+
 module.exports = friends;

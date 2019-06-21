@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>FRIEND FINDER</title>
+    <!-- Latest compiled and minified CSS & JS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets\css\style.css">
+    <link href="https://fonts.googleapis.com/css?family=Julius+Sans+One&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+
+
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="jumbotron  text-left jumboText" id="animatedjumbo">
+            <h1>Survey</h1>
+            <h3>Fill in your information and answer the 10 basic questions below to find your Friend, Buddy or Guy.</h3>
+            <hr>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+
+            <div class="col-12">
+
+                <div class="card">
+                    <div class="card-header">
+                        <h3><strong>Survey Questions</strong></h3>
+                    </div>
+                    <div class="card-body">
+                        <form method="POST" role="form">
+
+                            <div class="form-group">
+                                <label for="name">Name (Required)</label>
+                                <input type="text" class="form-control" id="name">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="role">Link to Photo Image (Required)</label>
+                                <input type="text" class="form-control" id="role">
+                            </div>
+
+                            <!-- begining of Questions Section -->
+                            <div class="form-group">
+                                <label for="questions">
+                                    <h2>Question 1</h2>
+                                </label>
+                                <p>How do you rate your ability to Care?</p>
+                                <p>Selected between 1 (You dont care) & 5 (You care)</p>
+                                <div class="btn-group">
+                                    <button class="btn btn-secondary dropdown-toggle" type="button"
+                                        id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
+                                        aria-expanded="false">
+                                        Question 1
+                                    </button>
+                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                        <a class="dropdown-item">1</a>
+                                        <a class="dropdown-item">2</a>
+                                        <a class="dropdown-item">3</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </form>
+                        <br>
+                        <div class="text-right">
+                            <button type="submit" class="btn btn-primary btn-md" id="add-btn"><span
+                                    class="fa fa-fire"></span> Submit</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <a href="/api/tables"><span class="fa fa-plus"></span>
+        API Friends List</a>
+    <a href="/api/Github"><span class="fa fa-plus"></span>Git Hub Repo</a>
+
+    <script type="text/javascript">
+        // update this portion from Star Wars app
+        $("#add-btn").on("click", function (event) {
+            event.preventDefault();
+            var newCharacter = {
+                name: $("#name").val().trim(),
+                role: $("#role").val().trim(),
+                age: $("#age").val().trim(),
+                forcePoints: $("#force-points").val().trim()
+            };
+
+            // update this portion from Star Wars app
+            $.post("/api/characters", newCharacter)
+                .then(function (data) {
+                    console.log("add.html", data);
+                    alert("Adding character...");
+                });
+        });
+    </script>
+
+</body>
+
+</html>

@@ -1,3 +1,5 @@
+// save the friend data in this JS file
+
 var friends = [
     {
         name: "yoda",

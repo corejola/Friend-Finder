@@ -11,10 +11,10 @@ module.exports = function (app) {
 
     //data validation for req.body...
     app.post("/api/friends", function (req, res) {
-        friends.push(req.body);
+
         // function to compare req.body with all of the objects in the friends array to determine which attributes yield the smallest difference
 
-        // friendMatch(friends, req.body);
+        console.log(req.body);
         var compatibility = [];
         for (var j = 0; j < friends.length; j++) {
             var scores = []
@@ -24,16 +24,18 @@ module.exports = function (app) {
             console.log(scores)
             matchScore = scores.reduce((total, match) => total + match, 0);
             console.log(matchScore);
-            compatibility.push(
-                {
-                    Name: friends[j],
-                    compatibility: matchScore
-                })
+            compatibility.push(matchScore);
+            // compatibility.push(
+            //     {
+            //         Name: friends[j].name,
+            //         matchScore: matchScore
+            //     });
 
         };
-        console.log(compatibility);
+        console.log(compatibility)
 
 
+        friends.push(req.body);
 
     });
 

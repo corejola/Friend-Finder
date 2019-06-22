@@ -1,10 +1,9 @@
 // save the friend data in this JS file
-
 var friends = [
     {
         name: "yoda",
         photo: "Yoda.png",
-        score: [
+        scores: [
             3,
             1,
             2,
@@ -18,8 +17,24 @@ var friends = [
         ]
     },
     {
-        name: "Ahmed",
-        photo: "https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
+        name: "Terrance",
+        photo: "http://southparkstudios.mtvnimages.com/shared/characters/celebrities/terrance.png",
+        scores: [
+            5,
+            1,
+            4,
+            4,
+            5,
+            1,
+            2,
+            5,
+            4,
+            1
+        ]
+    },
+    {
+        name: "Chewbacca",
+        photo: "https://upload.wikimedia.org/wikipedia/en/thumb/6/6d/Chewbacca-2-.jpg/220px-Chewbacca-2-.jpg",
         scores: [
             5,
             1,
@@ -34,7 +49,5 @@ var friends = [
         ]
     }
 ];
-
-var matches = [];
 
 module.exports = friends;

@@ -2,7 +2,7 @@
 var friends = [
     {
         name: "yoda",
-        photo: "Yoda.png",
+        photo: "https://giphy.com/gifs/hqoInD6ATfvW0/html5",
         scores: [
             3,
             5,
@@ -46,6 +46,22 @@ var friends = [
             5,
             4,
             5
+        ]
+    },
+    {
+        name: "Frieza",
+        photo: "https://i.pinimg.com/originals/c6/c8/f5/c6c8f5c5f00ec863614c80503ca66d7c.jpg",
+        scores: [
+            1,
+            2,
+            4,
+            1,
+            2,
+            3,
+            2,
+            5,
+            4,
+            3
         ]
     }
 ];

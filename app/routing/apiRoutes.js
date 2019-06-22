@@ -21,22 +21,19 @@ module.exports = function (app) {
             for (var i = 0; i < friends[j].scores.length; i++) {
                 scores.push(Math.abs(parseInt(friends[j].scores[i]) - parseInt(req.body.scores[i])));
             }
-            console.log(scores)
+            // console.log(scores)
             matchScore = scores.reduce((total, match) => total + match, 0);
-            console.log(matchScore);
+            // console.log(matchScore);
             compatibility.push(matchScore);
-            // compatibility.push(
-            //     {
-            //         Name: friends[j].name,
-            //         matchScore: matchScore
-            //     });
-
         };
-        console.log(compatibility)
-
+        console.log("compatibilty scores: " + compatibility)
+        var match = Math.min.apply(null, compatibility)
+        console.log("Your Match Score " + match)
+        var matchIndex = compatibility.indexOf(match);
+        console.log("Your Match is: " + friends[matchIndex].name + "!")
+        console.log("Your Match is: " + friends[matchIndex].photo + "!")
 
         friends.push(req.body);
-
     });
 
 };

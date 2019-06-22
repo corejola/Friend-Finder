@@ -13,7 +13,6 @@ module.exports = function (app) {
     app.post("/api/friends", function (req, res) {
 
         // function to compare req.body with all of the objects in the friends array to determine which attributes yield the smallest difference
-
         console.log(req.body);
         var compatibility = [];
         for (var j = 0; j < friends.length; j++) {
@@ -34,18 +33,11 @@ module.exports = function (app) {
         console.log("Your Match is: " + friends[matchIndex].photo + "!")
 
         friends.push(req.body);
+        res.json(friends[matchIndex]);
+
     });
 
 };
 
-function friendMatch(friends, user) {
 
-    // loop through the friends array for each friend to be compared with the user
-    // loop through the scores of a friend to compare against the user
-    // find the absolute value difference between users scores
-    // save the difference values for each friend/user pair into an array
-    // the lowest difference value pair is the friend match
-    // print modal on page display match name & photo
-
-};
 

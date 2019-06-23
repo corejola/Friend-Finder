@@ -21,23 +21,9 @@ Node &amp; Express Servers
     1. The compatibility logic determines the lowest number in the compabiliity array
     2. This value determines who your best friend, buddy or guy will be.
 
-`var compatibility = [];
-        for (var j = 0; j < friends.length; j++) {
-            var scores = []
-            for (var i = 0; i < friends[j].scores.length; i++) {
-                scores.push(Math.abs(parseInt(friends[j].scores[i]) - parseInt(req.body.scores[i])));
-            }
-            // console.log(scores)
-            matchScore = scores.reduce((total, match) => total + match, 0);
-            // console.log(matchScore);
-            compatibility.push(matchScore);
-        };
-        console.log("compatibilty scores: " + compatibility)
-        var match = Math.min.apply(null, compatibility)
-        console.log("Your Match Score " + match)
-        var matchIndex = compatibility.indexOf(match);
-        console.log("Your Match is: " + friends[matchIndex].name + "!")
-        console.log("Your Match is: " + friends[matchIndex].photo + "!")`
+## Links
+1. List of all viewers may be found on the api link at the bottom of the page.
+
 ## Deployed
 Friend-Finder deployed via Heroku 
 

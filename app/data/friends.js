@@ -2,7 +2,7 @@
 var friends = [
     {
         name: "yoda",
-        photo: "https://giphy.com/gifs/hqoInD6ATfvW0/html5",
+        photo: "http://aux.iconspalace.com/uploads/14681158021258495138.png",
         scores: [
             3,
             5,
@@ -18,7 +18,7 @@ var friends = [
     },
     {
         name: "Terrance",
-        photo: "http://southparkstudios.mtvnimages.com/shared/characters/celebrities/terrance.png",
+        photo: "https://www.google.com/url?sa=i&source=images&cd=&ved=2ahUKEwjCoenQqv7iAhWVsZ4KHTKdAcYQjRx6BAgBEAQ&url=https%3A%2F%2Faminoapps.com%2Fc%2Fsouth-park%2Fpage%2Fitem%2Fterrance-and-phillip%2FxB7v_ZjCQIxzaw1lP0mw02bk5wGjBwo4M&psig=AOvVaw2E_fIk2o9nefP3gJCwD2UY&ust=1561335623486547",
         scores: [
             2,
             1,
@@ -34,7 +34,7 @@ var friends = [
     },
     {
         name: "Chewbacca",
-        photo: "https://upload.wikimedia.org/wikipedia/en/thumb/6/6d/Chewbacca-2-.jpg/220px-Chewbacca-2-.jpg",
+        photo: "https://pbs.twimg.com/profile_images/595259163296530433/j6eWdl1N_400x400.jpg",
         scores: [
             5,
             3,
@@ -50,7 +50,7 @@ var friends = [
     },
     {
         name: "Frieza",
-        photo: "https://i.pinimg.com/originals/c6/c8/f5/c6c8f5c5f00ec863614c80503ca66d7c.jpg",
+        photo: "https://i.imgur.com/b81AznD.png",
         scores: [
             1,
             2,

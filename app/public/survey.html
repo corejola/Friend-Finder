@@ -261,8 +261,9 @@
                 <div class="modal-body" id="modalText">
                     ...
                 </div>
+                <div id="modalPhoto"></div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-secondary close" data-dismiss="modal">Close</button>
                 </div>
             </div>
         </div>
@@ -294,9 +295,6 @@
 
             };
 
-            console.log("Data Added: " + newFriend)
-
-
             $.post("/api/friends", newFriend)
                 .then(function (data) {
                     var name = data.name
@@ -320,8 +318,12 @@
                     console.log("Your Match" + name + "\nPhoto Source: " + photo)
 
                     $("#modalText").html(name);
-                    $("#modalText").append("<img src=" + photo + ">");
+                    $("#modalPhoto").append("<img src='" + photo + "'>");
                 });
+        });
+
+        $(".close").on("click", function (event) {
+            $("#modalPhoto").val("");
         });
     </script>
 

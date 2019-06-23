@@ -30,7 +30,7 @@ module.exports = function (app) {
         console.log("Your Match Score " + match)
         var matchIndex = compatibility.indexOf(match);
         console.log("Your Match is: " + friends[matchIndex].name + "!")
-        console.log("Your Match is: " + friends[matchIndex].photo + "!")
+        console.log("Match Photo Source: " + friends[matchIndex].photo + "!")
 
         friends.push(req.body);
         res.json(friends[matchIndex]);

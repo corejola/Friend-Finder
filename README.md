@@ -1,12 +1,6 @@
 # Friend-Finder
 Node &amp; Express Servers
 
-### Pseudo Code
-1. app displays homepage via server
-    1. uses `app.get` to display homepage
-    2. to fill out survery, click on survey button,
-2. 
-
 ## How to Use Friend Finder
 1. On the Friend Finder Home Page, to find a Friend, Buddy or Guy, click on the Survey Button.
 2. Fill out the form with your name and a link to your photo.
